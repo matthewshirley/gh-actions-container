@@ -10,5 +10,5 @@ jobs:
         image: ghcr.io/matthewshirley/python3.6.12-node12:latest
     steps:
     - uses: actions/checkout@v1
-    - run: python -v
+    - run: python --v
     - run: node -v
