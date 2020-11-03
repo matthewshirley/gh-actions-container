@@ -1,0 +1,16 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+jobs:
+  py-catchall:
+    runs-on: ubuntu-latest
+    container:
+        image: ghcr.io/matthewshirley/python3.6.12-node12:latest
+    steps:
+    - uses: actions/checkout@v1
+    - run: python -v
+    - run: node -v
+
+    docker tag python3.6.12-node12 ghcr.io/matthewshirley/python3.6.12-node12
